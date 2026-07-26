@@ -1,18 +1,9 @@
-/*
-Stacking order:
-5    - UV light background
-10   - dark overlay
-20   - always visible page content
-100  - custom cursor
-*/
-
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Space Grotesk", sans-serif;
     color: white;
-    cursor: none;
 }
 
 p, li, a {
@@ -38,10 +29,8 @@ html {
 }
 
 nav,
-.vis,
 img {
     position: relative;
-    z-index: 20;
 }
 
 nav {
@@ -96,7 +85,6 @@ main {
 
 h1, h2 {
     margin-bottom: 0;
-    z-index: 20;
 }
 
 h2 {
@@ -131,77 +119,7 @@ img {
 iframe {
     border-radius:12px; 
     display: block;
-    z-index: 20;
     width: 60%;
     margin: 1rem auto 0;
 
-}
-
-.secret {
-    position: relative;
-    z-index: 1;
-}
-
-.inner-cursor{
-	position: fixed;
-    z-index: 100;
-	left: 10px;
-	width: 12px;
-	height: 12px;
-	transform: translate(-50%, -50%);
-	background-color: #fff;
-	mix-blend-mode: difference;
-	pointer-events: none;
-	border-radius: 50%;
-	transition: width 0.5s, height 0.5s;
-    box-shadow: 0 0 30px #fff, 0 0 0px #fff, 0 0 10px #fff, 
-                0 0 30px #85b6ff, 0 0 20px #85b6ff, 0 0 10px #85b6ff;
-}
-
-.inner-cursor.grow{
-	width: 25px;
-	height: 25px;
-	transition: width 0.5s, height 0.5s;
-}
-
-.outer-cursor{
-	position: fixed;
-    z-index: 100;
-	width: 25px;
-	height: 25px;
-	transform: translate(-50%, -50%);
-	border: 1px solid #fff;
-	mix-blend-mode: difference;
-	border-radius: 50%;
-	pointer-events: none;
-}
-
-.underlay{
-    position: fixed;
-    top: 10vh;
-    left: 0;
-    width: 100%;
-    height: 90vh;
-    z-index: 5;
-    pointer-events: none;
-    background: radial-gradient(
-        100px 100px at var(--x) var(--y),
-        transparent 0.1%,
-        #212a37 96%
-    );
-}
-
-.overlay{
-    position: fixed;
-    top: 10vh;
-    left: 0;
-    width: 100%;
-    height: 90vh;
-    z-index: 10;
-    pointer-events: none;
-    background: linear-gradient(
-        #212a37 96%,
-        transparent
-    );    
-    opacity: 0.1;
 }
