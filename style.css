@@ -20,8 +20,11 @@ p, li, a {
 }
 
 li {
+    margin-top: 1ch;
     margin-bottom: 1ch;
     margin-left: 1rem;
+    margin-right: 2rem;
+
 }
 
 ul {
@@ -57,11 +60,6 @@ nav ul {
 	justify-content: space-around;
 	list-style: none;
 	display: flex;
-}
-
-nav li{
-    margin-left: 2rem;
-    margin-top: 1ch;
 }
 
 nav a {
